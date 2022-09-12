@@ -51,11 +51,42 @@
     width: 900px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;   
+    justify-content: center;/*When you change the flex-direction, its justify-content align changes. If it centered the items
+    in a row, now, when the flex-direction is a column, it aligns the items in a column*/
+    align-items: center; /*We can use this to align the items horizontally.*/
+    flex-direction: row;   
 }
 
 .photo-grid-item {
     border: 1px solid #fff;
     width: 300px;
     height: 300px;
+}
+
+.first-item {
+    order: 1;
+}
+
+.last-item {
+    order: -1;
+}
+
+.footer {
+    display: flex;
+}
+
+.footer-item {
+    border: 1px solid #fff;
+    background-color: #D6E9FE;
+    height: 200px;
+    flex: 1; /*This property will make the box n times the size of the other boxes.
+    You can use flex: 1, 2, 3...n*/
+}
+
+.footer-one,
+.footer-three {
+    background-color: #5995DA;
+    flex: initial; /*Flex initial makes the boxes stay the same size when you resize the 
+    browser.*/
+    width: 300px;
 }
